@@ -1,7 +1,7 @@
 #ifndef _TASK_H_
 #define _TASK_H_
 
-int numTask = 0;
+int numTask;
 
 typedef struct 
 {
@@ -9,6 +9,6 @@ typedef struct
     int completed;
 }Task;
 
-extern void displayTasks();
+void displayTasks();
 
 #endif

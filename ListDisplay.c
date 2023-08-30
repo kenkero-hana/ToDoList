@@ -1,7 +1,9 @@
 #include <stdio.h>
 
-#include "init.h"
+//#include "init.h"
 #include "task.h"
+
+void displayTasks();
 
 #define TASK_MAX 100
 

@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "init.h"
+//#include "init.h"
 #include "task.h"
 
+void Situation(int number);
 
 int main(void){
     int decide;
-    int tasuku = 0;
+    //int tasuku = 0;
 
     printf("TODOリストを作成しよう\n");
     printf("----------------------------\n");
@@ -27,10 +28,12 @@ int main(void){
 void Situation(int number){
     switch(number){
         case 1:
+            numTask = 0;
             displayTasks();
             numTask++;
             break;
         case 2:
+            addTask();
             printf("2");
             break;
         case 3:
