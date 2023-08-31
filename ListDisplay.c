@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-//#include "init.h"
+#include "init.h"
 #include "task.h"
 
 void displayTasks();
 
-#define TASK_MAX 100
 
 void displayTasks(){
     Task tasks[TASK_MAX];
