@@ -3,6 +3,7 @@
 
 //#include "init.h"
 #include "task.h"
+#include "add.h"
 
 void Situation(int number);
 
@@ -15,6 +16,7 @@ int main(void){
     printf("1:タスク表示\n");
     printf("2:タスク追加\n");
     printf("3:タスク削除\n");
+    printf("4:タスク終了\n");
     printf("=============================\n");
     printf("どれにする？:");
     scanf("%d", &decide);
@@ -34,7 +36,7 @@ void Situation(int number){
             break;
         case 2:
             addTask();
-            printf("2");
+            //printf("2");
             break;
         case 3:
             printf("3");

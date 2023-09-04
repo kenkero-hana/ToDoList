@@ -2,6 +2,7 @@
 
 #include "init.h"
 #include "task.h"
+#include "add.h"
 
 void displayTasks();
 
