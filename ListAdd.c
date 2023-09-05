@@ -8,24 +8,26 @@
 void addTask(){
     Task tasks[TASK_MAX];
     int i;
-    //char text;
+
+    f = fopen("text.txt", "W");
+    //if(f == NULL){
+    //    return;
+    //}
 
     printf("一日のやることを記載して\n");
     //for(i = 0; i < numTask; i++){
-        if(numTask == (int)NULL){
-            scanf("%s", tasks[i].text);
-        }
-        else{
-            return;
-        }
+        //if(numTask == (int)NULL){
+    scanf("%s", tasks[0].text);
+        //}
+        //else{
+        //    return;
+        //}
+
+    fprintf(f, "%s",tasks[0].text);
     //}
-
     
-    // FILE *f;
+    fclose(f);
 
-    // f = fopen("text.txt", "W");
-    // if(f == NULL){
-    //     return;
-    // }
-    // fclose(f);
+    //printf("%s", tasks[0].text);
+    //return 0;
 }

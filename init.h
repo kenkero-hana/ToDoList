@@ -3,6 +3,6 @@
 
 #define TASK_MAX 100
 
-void Situation(int);
+//void Situation(int);
 
 #endif

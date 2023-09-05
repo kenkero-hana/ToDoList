@@ -22,28 +22,47 @@ int main(void){
     scanf("%d", &decide);
 
     // 状態遷移
-    Situation(decide);
-    
+    //Situation(decide);
+    while(decide != 4){
+        switch(decide){
+            case 1:
+                numTask = 0;
+                displayTasks();
+                numTask++;
+                break;
+            case 2:
+                addTask();
+                //printf("2");
+                break;
+            case 3:
+                printf("3");
+                break;
+            case 4:
+                break;
+            default:
+                break;
+        }
+    }
     return 0;
 }
 
-void Situation(int number){
-    switch(number){
-        case 1:
-            numTask = 0;
-            displayTasks();
-            numTask++;
-            break;
-        case 2:
-            addTask();
-            //printf("2");
-            break;
-        case 3:
-            printf("3");
-            break;
-        case 4:
-            break;
-        default:
-            break;
-    }
-}
+//void Situation(int number){
+    // switch(number){
+    //     case 1:
+    //         numTask = 0;
+    //         displayTasks();
+    //         numTask++;
+    //         break;
+    //     case 2:
+    //         addTask();
+    //         //printf("2");
+    //         break;
+    //     case 3:
+    //         printf("3");
+    //         break;
+    //     case 4:
+    //         break;
+    //     default:
+    //         break;
+    // }
+//}

@@ -9,9 +9,17 @@ void displayTasks();
 
 void displayTasks(){
     Task tasks[TASK_MAX];
-    printf("====タスク一覧====\n");
-    for(int i = 0; i < numTask; i++){
-        //scanf("%s", &tasks[i].text);
-        printf("%d.%s\n", i + 1, tasks[i].text);
+
+    f = fopen("text.txt", "r"); // "r"は読み込みモードを意味します
+
+    if (f == NULL) {
+        printf("ファイルを開けませんでした。\n");
+        return;
     }
+    printf("====タスク一覧====\n");
+    while (fgets(tasks->text, sizeof(tasks), f) != NULL) {
+        printf("%s", tasks->text); // ファイルから読み込んだタスクを表示
+    }
+
+    fclose(f);
 }
