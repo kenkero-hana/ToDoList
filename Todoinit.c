@@ -5,7 +5,7 @@
 #include "task.h"
 #include "add.h"
 
-void Situation(int number);
+//void Situation(int number);
 
 int main(void){
     int decide;
@@ -23,7 +23,7 @@ int main(void){
 
     // 状態遷移
     //Situation(decide);
-    while(decide != 4){
+    //while(decide != 4){
         switch(decide){
             case 1:
                 numTask = 0;
@@ -42,7 +42,7 @@ int main(void){
             default:
                 break;
         }
-    }
+    //}
     return 0;
 }
 

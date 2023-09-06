@@ -6,28 +6,25 @@
 #include "add.h"
 
 void addTask(){
-    Task tasks[TASK_MAX];
+    Task tasks;
     int i;
-
-    f = fopen("text.txt", "W");
-    //if(f == NULL){
-    //    return;
-    //}
+    char str[256];
 
     printf("一日のやることを記載して\n");
-    //for(i = 0; i < numTask; i++){
-        //if(numTask == (int)NULL){
-    scanf("%s", tasks[0].text);
-        //}
-        //else{
-        //    return;
-        //}
 
-    fprintf(f, "%s",tasks[0].text);
-    //}
+    f = fopen("text.txt", "a+");
+    if(f == NULL){
+        perror("読み込み失敗\n");
+        return;
+    }
+
+    fscanf(f, "%s", tasks.text);
+    //scanf("%s", tasks.text);
+
+    //fgets(str , sizeof(str), f);
+
+    fprintf(f ,"%s", tasks.text);
+    printf("%s", tasks.text);
     
     fclose(f);
-
-    //printf("%s", tasks[0].text);
-    //return 0;
 }
