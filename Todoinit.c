@@ -43,6 +43,10 @@ int main(void){
                 break;
         }
     //}
+
+    if(decide == 4){
+        return 0;
+    }
     return 0;
 }
 

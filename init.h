@@ -3,6 +3,8 @@
 
 #define TASK_MAX 100
 
+FILE *f;
+
 //void Situation(int);
 
 #endif

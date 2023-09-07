@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "task.h"
 #include "init.h"
@@ -10,7 +11,7 @@ void addTask(){
     int i;
     char str[256];
 
-    printf("一日のやることを記載して\n");
+    gets(tasks.text);
 
     f = fopen("text.txt", "a+");
     if(f == NULL){
@@ -18,13 +19,21 @@ void addTask(){
         return;
     }
 
-    fscanf(f, "%s", tasks.text);
-    //scanf("%s", tasks.text);
-
-    //fgets(str , sizeof(str), f);
-
-    fprintf(f ,"%s", tasks.text);
-    printf("%s", tasks.text);
+    printf("一日のやることを記載して\n");
+    while (gets(tasks.text) && strlen(tasks.text))
+    {
+        fputs(tasks.text, f);
+        fputs("\n", f);
+    }
     
+    // for(i = 0; i < 5; i++){
+    //     fscanf(f, "%c", tasks.text[i]);
+    //     fprintf(f, "%c", tasks.text[i]);
+    // }
+    
+    // fgets(&tasks.text[i] , sizeof(tasks.text[i]), stdin);
+
+    // //printf("%s", tasks[i].text);
     fclose(f);
+
 }

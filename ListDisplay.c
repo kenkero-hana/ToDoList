@@ -13,6 +13,7 @@ void displayTasks();
 void displayTasks(){
     Task tasks[TASK_MAX];
     char str[N];
+    
 
     f = fopen("text.txt", "r"); // "r"は読み込みモードを意味します
 
