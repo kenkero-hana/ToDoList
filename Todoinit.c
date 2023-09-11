@@ -4,6 +4,7 @@
 //#include "init.h"
 #include "task.h"
 #include "add.h"
+#include "delete.h"
 
 //void Situation(int number);
 
@@ -35,7 +36,8 @@ int main(void){
                 //printf("2");
                 break;
             case 3:
-                printf("3");
+                ListDelete();
+                //printf("3");
                 break;
             case 4:
                 break;

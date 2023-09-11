@@ -23,7 +23,7 @@ void addTask(){
     while (gets(tasks.text) && strlen(tasks.text))
     {
         fputs(tasks.text, f);
-        fputs("\n", f);
+        //fputs("\n", f);
     }
     
     // for(i = 0; i < 5; i++){
