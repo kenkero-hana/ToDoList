@@ -11,7 +11,7 @@ void addTask(){
     int i;
     char str[256];
 
-    gets(tasks.text);
+    fgets(tasks.text, sizeof(tasks), stdin);
 
     f = fopen("text.txt", "a+");
     if(f == NULL){
@@ -20,20 +20,12 @@ void addTask(){
     }
 
     printf("一日のやることを記載して\n");
-    while (gets(tasks.text) && strlen(tasks.text))
+    // fgetでキーボードからテキストを読み取る
+    while(fgets(tasks.text, sizeof(tasks), stdin) != NULL && strlen(tasks.text) > 1)
     {
         fputs(tasks.text, f);
-        //fputs("\n", f);
     }
-    
-    // for(i = 0; i < 5; i++){
-    //     fscanf(f, "%c", tasks.text[i]);
-    //     fprintf(f, "%c", tasks.text[i]);
-    // }
-    
-    // fgets(&tasks.text[i] , sizeof(tasks.text[i]), stdin);
 
-    // //printf("%s", tasks[i].text);
     fclose(f);
 
 }

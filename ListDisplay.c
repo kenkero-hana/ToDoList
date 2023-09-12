@@ -14,7 +14,6 @@ void displayTasks(){
     Task tasks[TASK_MAX];
     char str[N];
     
-
     f = fopen("text.txt", "r"); // "r"は読み込みモードを意味します
 
     if (f == NULL) {
@@ -23,7 +22,7 @@ void displayTasks(){
     }
     printf("====タスク一覧====\n");
     while (fgets(str, N, f) != NULL) {
-        printf("%s\n", str); // ファイルから読み込んだタスクを表示
+        printf("%s", str); // ファイルから読み込んだタスクを表示
     }
 
     fclose(f);
