@@ -57,7 +57,9 @@ void ListDelete(){
         return;
     }
 
-    //printf("ファイルがクリアされました。\n");
-    printf("行 %d が削除されました。\n", lineToDelete);
+    if(lineToDelete != 0){
+        //printf("ファイルがクリアされました。\n");
+        printf("行 %d が削除されました。\n", lineToDelete);
+    }
 
 }
